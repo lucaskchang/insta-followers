@@ -1,10 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+
+  modules: [
+    '@nuxt/ui',
+    'nuxt-gtag',
+    '@nuxt/eslint',
+  ],
   devtools: { enabled: true },
 
   app: {
     head: {
-      title: 'Nuxt Boilerplate',
+      title: 'Instagram Followers',
       htmlAttrs: {
         lang: 'en',
       },
@@ -18,21 +24,7 @@ export default defineNuxtConfig({
     },
   },
 
-  css: ['@/assets/css/styles.scss'],
-
-  modules: [
-    '@nuxt/ui',
-    '@nuxt/image',
-    'nuxt-gtag',
-    '@nuxt/eslint',
-    '@pinia/nuxt',
-    '@vueuse/nuxt',
-    '@nuxt/fonts',
-  ],
-
-  gtag: {
-    id: 'G-QNLZ5NY7HH',
-  },
+  compatibilityDate: '2024-09-07',
 
   eslint: {
     config: {
@@ -40,5 +32,7 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: '2024-09-07',
+  gtag: {
+    id: 'G-QNLZ5NY7HH',
+  },
 });
